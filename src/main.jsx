@@ -11,28 +11,37 @@ import { GOOGLE_CLIENT_ID } from "./utils/constants";
 
 import "./index.css";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <HomePage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "post/:postId",
+      element: <PostPage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "tag/:tagId",
+      element: <TagPage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "users",
+      element: <UsersPage />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "*",
+      element: <ErrorPage />,
+    },
+  ],
   {
-    path: "/",
-    element: <HomePage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "post/:postId",
-    element: <PostPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "tag/:tagId",
-    element: <TagPage />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: "users",
-    element: <UsersPage />,
-    errorElement: <ErrorPage />,
-  },
-]);
+    basename: "/blog-react",
+  }
+);
 
 const queryClient = new QueryClient({
   defaultOptions: {
