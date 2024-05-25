@@ -89,6 +89,10 @@ main {
   padding: 20px;
 }
 
+.post {
+  padding: 20px;
+}
+
 article {
   background: #fff;
   margin-bottom: 20px;
@@ -125,6 +129,59 @@ article p {
   padding: 5px;
   border-radius: 3px;
   margin-right: 5px;
+}
+
+.comments {
+  background: #fff;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.comments h3 {
+  margin-top: 0;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment p {
+  margin: 5px 0;
+}
+
+.user-profile {
+  padding: 20px;
+}
+
+.user-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user-photo {
+  max-width: 150px;
+  height: auto;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.user-details {
+  max-width: calc(100% - 170px);
+}
+
+.user-details h2 {
+  margin-top: 0;
+}
+
+.user-details p {
+  margin: 10px 0;
 }
 
 .error-page {

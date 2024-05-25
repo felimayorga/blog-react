@@ -10,7 +10,7 @@ export default function Header() {
             <Link to="/">Inicio</Link>
           </li>
           <li>
-            <Link to="/users">Users</Link>
+            <Link to="/users">Usuarios</Link>
           </li>
         </ul>
       </nav>

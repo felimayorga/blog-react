@@ -1,4 +1,14 @@
-export default function Post({ id, image, title, tags, owner }) {
+import { Link } from "react-router-dom";
+
+export default function Post({
+  id,
+  image,
+  title,
+  tags,
+  owner,
+  text = null,
+  noCta,
+}) {
   const { firstName, lastName } = owner;
 
   return (
@@ -19,7 +29,8 @@ export default function Post({ id, image, title, tags, owner }) {
         <p>
           Publicado por: {firstName} {lastName}
         </p>
-        <a href="#">Leer más</a>
+        {noCta && text ? <p>{text}</p> : null}
+        {!noCta ? <Link to={`/post/${id}`}>Leer más</Link> : null}
       </div>
     </article>
   );
